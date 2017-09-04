@@ -8,7 +8,6 @@ using System.IO;
 public class Day9
 {
 
-   
     public static void PartOne()
     {
         char[] compressedFile = GetFile();

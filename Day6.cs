@@ -41,7 +41,7 @@ namespace AdventOfCode2016Part2
 
         private static string GetFreqs(List<string> lines, int part)
         {
-            //Create frequency arrays for each position
+        //Create frequency arrays for each position
             int[] freqs0 = new int[26];
             int[] freqs1 = new int[26];
             int[] freqs2 = new int[26];
@@ -50,7 +50,7 @@ namespace AdventOfCode2016Part2
             int[] freqs5 = new int[26];
             int[] freqs6 = new int[26];
             int[] freqs7 = new int[26];
-            //Update arrays
+         //Update arrays
             for (int i = 0; i < lines.Count; i++)
             {
                 int char0 = Convert.ToInt16(lines[i][0]) - 97;
@@ -77,7 +77,7 @@ namespace AdventOfCode2016Part2
                 int char7 = Convert.ToInt16(lines[i][7]) - 97;
                 freqs7[char7] += 1;
             }
-            //Find most frequent characters
+        //Find most frequent characters
             int max0, max1, max2, max3, max4, max5, max6, max7;
             max0 = max1 = max2 = max3 = max4 = max5 = max6 = max7 = 0;
             if (part == 1)
@@ -108,7 +108,7 @@ namespace AdventOfCode2016Part2
                     if (freqs7[j] < freqs7[max7]) { max7 = j; }
                 }
             }
-            //Create string
+        //Create string
             char[] answer = new char[8];
             answer[0] = Convert.ToChar(max0 + 97);
             answer[1] = Convert.ToChar(max1 + 97);
